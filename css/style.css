@@ -48,6 +48,10 @@ html{
 .my-col{
     width:100%
 }
+.my-col-1-6{
+    width:calc((100% / 6) - 20px);
+    margin:0 10px;
+}
 
 /*utility*/
 .spaced{
@@ -92,7 +96,7 @@ main .header-main{
 main #main-music{
     height:100%;
     overflow: auto;
-    padding-top:80px;
+    padding:80px 20px 0 20px;
 }
 main #main-music nav{
     text-align: center;
