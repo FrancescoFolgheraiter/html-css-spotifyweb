@@ -52,7 +52,10 @@ html{
     width:calc((100% / 6) - 20px);
     margin:0 10px;
 }
-
+.my-col-1-5{
+    width:calc((100% / 5) - 20px);
+    margin:0 10px;
+}
 /*utility*/
 .spaced{
     justify-content: space-between;
@@ -71,6 +74,9 @@ html{
 }
 .text-white{
     color:white;
+}
+.circle{
+    border-radius: 50%;
 }
 /*section up*/
 .container-main{
