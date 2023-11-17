@@ -56,6 +56,17 @@ html{
     width:calc((100% / 5) - 20px);
     margin:0 10px;
 }
+.bar{
+    background-color: #5a5a5a;
+    height:5px;
+    border-radius: 10px;
+}
+.filling{
+    background-color: var(--second-grey);
+    height:100%;
+    border-radius: 10px;
+}
+
 /*utility*/
 .spaced{
     justify-content: space-between;
@@ -89,6 +100,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding:15px;
 }
 .container-main aside .img-cont:first-child{
     width: 150px;
@@ -108,22 +120,27 @@ html{
     justify-content: center;
 }
 .container-main aside .playlist>ul{
-    max-height: 20%;
+    max-height: 50%;
     overflow:scroll;
 }
 
 .container-main aside .footer-aside>div:first-child{
-    border-bottom:1px solid var(--second-grey);
+    border-bottom:2px solid var(--second-grey);
+}
+.container-main aside .footer-aside>div{
+    display:flex;
+    align-items: center;
 }
 .container-main aside .footer-aside div:first-child .img-cont{
     width:20px;
 }
-.container-main aside .footer-aside div:last-child .img-cont>*{
+.container-main aside .footer-aside div:last-child .img-cont{
     width:30px;
-    height:30px;
-    background-color: var(--second-grey);
-    border-radius: 50%;
+}
+.container-main aside .footer-aside div:last-child .img-cont>*{
     object-fit: cover;
+    border-radius: 50%;
+    background-color: var(--second-grey);
 }
 
 /*
@@ -162,6 +179,25 @@ main #main-music nav ul li a{
 /*
     FOOTER
 */
+footer .my-row div:first-child .img-cont{
+    width:50px;
+}
+footer .my-row>div:first-child>div:first-child{
+    display:flex;
+    align-items: center;
+}
+
+
+footer .my-row>div:last-child{
+    display:flex;
+    align-items: center;
+}
+footer .my-row>div:last-child .bar{
+    width:150px;
+}
+footer .my-row>div:last-child .bar .filling{
+    width:50px;
+}
 
 /*
     MEDIA
@@ -203,6 +239,7 @@ main #main-music nav ul li a{
     height: 100px;
     background-color: orangered;
 }
+
 .debug aside{
     width:200px;
     background-color: lightcoral;
