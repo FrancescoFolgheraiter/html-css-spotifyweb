@@ -8,15 +8,52 @@
     box-sizing: border-box;
 }
 
+img{
+    width:100%;
+}
+
 /*
     GENERAL
 */
+
+
 
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
 }
+
+/*utility*/
+
+/*
+    MAIN
+*/
+
+/*
+    FOOTER
+*/
+
+/*
+    MEDIA
+*/
+
+/*first brackpoint 1100px - Desktop*/
+@media screen and(max-width:1100px){
+
+}
+/*second brackpoint 700px - tablet*/
+@media screen and(max-width:700px){
+    
+}
+/*third brackpoint 600px -smartphone*/
+@media screen and(max-width:600px){
+    
+}
+
+/*
+    DEBUG
+*/
