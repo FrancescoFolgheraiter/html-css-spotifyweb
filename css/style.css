@@ -1,3 +1,10 @@
+:root{
+    --main-grey:#282828;
+    --main-dark-blue:#141922;
+    --main-green:#adff2f;
+    --second-grey:#a3a3a3;
+}
+
 /*
     RESET
 */
@@ -27,8 +34,40 @@ html{
     width: 1000px;
     margin: 0 auto;
 }
+.my-button{
+    padding:10px 20px;
+    border:1px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    color:black;
+}
+.my-row{
+    display:flex;
+    flex-wrap: wrap;
+}
+.my-col{
+    width:100%
+}
 
 /*utility*/
+.spaced{
+    justify-content: space-between;
+}
+.bg-first-color{
+    background-color: var(--main-dark-blue);
+}
+.bg-second-color{
+    background-color: var(--main-grey);
+}
+.bg-third-color{
+    background-color:black;
+}
+.bg-fourth-color{
+    background-color: var(--main-green);
+}
+.text-white{
+    color:white;
+}
 /*section up*/
 .container-main{
     display:flex;
@@ -42,7 +81,11 @@ main .header-main{
     top:0;
     right:0;
     width:calc(100% - 200px);
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
 .container-main main {
     width:calc(100% - 200px);
 }
@@ -51,8 +94,15 @@ main #main-music{
     overflow: auto;
     padding-top:80px;
 }
+main #main-music nav{
+    text-align: center;
+}
 main #main-music nav ul li{
+    margin:10px 0px;
     display: inline-block;
+}
+main #main-music nav ul li a{
+    padding: 0 20px;
 }
 
 /*
@@ -95,4 +145,7 @@ main #main-music nav ul li{
 .debug .header-main{
     background-color: lightgreen;
     border:1px dashed red;
+}
+.debug #main-music nav{
+    background-color: lightsalmon;
 }
