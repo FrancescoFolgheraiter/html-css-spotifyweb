@@ -10,6 +10,7 @@
 
 img{
     width:100%;
+    display:block;
 }
 
 /*
@@ -28,10 +29,31 @@ html{
 }
 
 /*utility*/
-
+/*section up*/
+.container-main{
+    display:flex;
+}
 /*
     MAIN
 */
+main .header-main{
+    height: 80px;
+    position:fixed;
+    top:0;
+    right:0;
+    width:calc(100% - 200px);
+}
+.container-main main {
+    width:calc(100% - 200px);
+}
+main #main-music{
+    height:100%;
+    overflow: auto;
+    padding-top:80px;
+}
+main #main-music nav ul li{
+    display: inline-block;
+}
 
 /*
     FOOTER
@@ -57,3 +79,20 @@ html{
 /*
     DEBUG
 */
+.debug>.container-main{
+    height:calc(100vh - 100px);
+    background-color: lightblue;
+}
+.debug footer{
+    height: 100px;
+    background-color: orangered;
+}
+.debug aside{
+    width:200px;
+    background-color: lightcoral;
+    border:1px dashed red;
+}
+.debug .header-main{
+    background-color: lightgreen;
+    border:1px dashed red;
+}
