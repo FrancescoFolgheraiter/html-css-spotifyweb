@@ -83,6 +83,50 @@ html{
     display:flex;
 }
 /*
+    ASIDE
+*/
+.container-main aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container-main aside .img-cont:first-child{
+    width: 150px;
+}
+.container-main aside .header-aside .img-cont:not(:first-child){
+    width: 30px;
+}
+.container-main aside .playlist{
+    flex-grow: 1;
+}
+.container-main aside .playlist>div:first-of-type{
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-main aside .playlist>ul{
+    max-height: 20%;
+    overflow:scroll;
+}
+
+.container-main aside .footer-aside>div:first-child{
+    border-bottom:1px solid var(--second-grey);
+}
+.container-main aside .footer-aside div:first-child .img-cont{
+    width:20px;
+}
+.container-main aside .footer-aside div:last-child .img-cont>*{
+    width:30px;
+    height:30px;
+    background-color: var(--second-grey);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*
     MAIN
 */
 main .header-main{
