@@ -141,9 +141,22 @@ aside{
 .logo>*:last-child{
     display:none;
 }
-.container-main aside .header-aside .img-cont:not(:first-child){
+.header-aside .img-cont{
+    margin-bottom: 10px;
+}
+aside .header-aside .img-cont:not(:first-child){
     width: 30px;
 }
+.header-aside .img-cont{
+    position:relative;
+}
+.header-aside span{
+    position:absolute;
+    left:35px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
 .container-main aside .playlist{
     flex-grow: 1;
 }
@@ -381,6 +394,9 @@ footer .my-row>div:last-child .bar .filling{
     .logo>*:last-child{
         display:block;
     }
+    .header-aside .img-cont span{
+        display:none;
+    }
     aside .header-aside{
         flex-grow: 1;
     }
@@ -390,6 +406,10 @@ footer .my-row>div:last-child .bar .filling{
     }
     aside .footer-aside span{
         display:none
+    }
+    footer .cont-heart-folder{
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
