@@ -3,6 +3,7 @@
     --main-dark-blue:#141922;
     --main-green:#adff2f;
     --second-grey:#a3a3a3;
+    --second-dark-blue:#080b12;
 }
 
 /*
@@ -36,10 +37,10 @@ html{
 }
 .my-button{
     padding:10px 20px;
-    border:1px solid black;
+    border:1px solid white;
     border-radius: 25px;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 .my-row{
     display:flex;
@@ -86,8 +87,17 @@ html{
 .bg-fourth-color{
     background-color: var(--main-green);
 }
+.bg-fifth-color{
+    background-color: var(--second-dark-blue);
+}
 .text-white{
     color:white;
+}
+.text-black{
+    color:black;
+}
+.text-grey{
+    color:var(--second-grey);
 }
 .circle{
     border-radius: 50%;
@@ -99,6 +109,9 @@ html{
 /*
     ASIDE
 */
+aside{
+    width:200px;
+}
 .container-main aside{
     display: flex;
     flex-direction: column;
@@ -271,18 +284,3 @@ footer .my-row>div:last-child .bar .filling{
 /*
     DEBUG
 */
-
-
-
-.debug aside{
-    width:200px;
-    background-color: lightcoral;
-    border:1px dashed red;
-}
-.debug .header-main{
-    background-color: lightgreen;
-    border:1px dashed red;
-}
-.debug #main-music nav{
-    background-color: lightsalmon;
-}
