@@ -66,6 +66,9 @@ html{
     height:100%;
     border-radius: 10px;
 }
+.container-main{
+    height:calc(100vh - 100px);
+}
 
 /*utility*/
 .spaced{
@@ -101,6 +104,8 @@ html{
     flex-direction: column;
     justify-content: flex-end;
     padding:15px;
+    height: 100%;
+    min-height: 440px;
 }
 .container-main aside .img-cont:first-child{
     width: 150px;
@@ -121,7 +126,7 @@ html{
 }
 .container-main aside .playlist>ul{
     max-height: 50%;
-    overflow:scroll;
+    overflow:auto;
 }
 
 .container-main aside .footer-aside>div:first-child{
@@ -146,6 +151,7 @@ html{
 /*
     MAIN
 */
+
 main .header-main{
     height: 80px;
     position:fixed;
@@ -179,19 +185,53 @@ main #main-music nav ul li a{
 /*
     FOOTER
 */
+footer{
+    position:relative;
+    padding:30px 20px;
+    height: 100px;
+}
 footer .my-row div:first-child .img-cont{
     width:50px;
 }
-footer .my-row>div:first-child>div:first-child{
+footer .my-row>div:first-child{
+    display:flex;
+    
+}
+footer .my-row>div:first-child>div{
     display:flex;
     align-items: center;
 }
+footer .my-row>div:first-child>div>div{
+  margin:0 5px;
+}
+footer .my-row>div:nth-child(2){
+    width:30%;
+}
 
+footer .control-panel-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+footer .control-panel-button>*{
+    margin:0 15px;
+}
+
+footer .my-row>div:nth-child(2) .bar{
+    width:100%;
+}
+footer .my-row>div:nth-child(2) .bar .filling{
+    width:50%;
+}
 
 footer .my-row>div:last-child{
     display:flex;
     align-items: center;
 }
+footer .my-row>div:last-child>div{
+    margin:0 5px;
+  }
 footer .my-row>div:last-child .bar{
     width:150px;
 }
@@ -231,14 +271,8 @@ footer .my-row>div:last-child .bar .filling{
 /*
     DEBUG
 */
-.debug>.container-main{
-    height:calc(100vh - 100px);
-    background-color: lightblue;
-}
-.debug footer{
-    height: 100px;
-    background-color: orangered;
-}
+
+
 
 .debug aside{
     width:200px;
