@@ -57,6 +57,14 @@ html{
     width:calc((100% / 5) - 20px);
     margin:0 10px;
 }
+.hover-shadow{
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.8;
+    color:white;
+    display:none;
+}
 .bar{
     background-color: #5a5a5a;
     height:5px;
@@ -165,9 +173,14 @@ aside{
     MAIN
 */
 
+.container-main main {
+    width:calc(100% - 200px);
+}
+
 main .header-main{
     height: 80px;
     position:fixed;
+    z-index: 2;
     top:0;
     right:0;
     width:calc(100% - 200px);
@@ -175,10 +188,10 @@ main .header-main{
     justify-content: flex-end;
     align-items: center;
 }
-
-.container-main main {
-    width:calc(100% - 200px);
+main .header-main .my-button{
+    margin-right:30px;
 }
+
 main #main-music{
     height:100%;
     overflow: auto;
@@ -188,13 +201,58 @@ main #main-music nav{
     text-align: center;
 }
 main #main-music nav ul li{
-    margin:10px 0px;
     display: inline-block;
+    margin:20px 10px;
+    position:relative;
 }
-main #main-music nav ul li a{
-    padding: 0 20px;
+main #main-music nav ul li>.hover-underline{
+    width:30px;
+    background-color: var(--main-green);
+    display:none;
 }
 
+main #main-music nav ul li:hover>.hover-underline{
+    display:block;
+    position:absolute;
+    top:110%;
+    left:50%;
+    transform:translateX(-50%);
+}
+main #main-music nav ul li a{
+    text-decoration: none;
+    color:var(--second-grey);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: 0 10px;
+}
+
+main #main-music .my-row .card{
+    text-align: center;
+    position:relative;
+}
+main #main-music .my-row .card>.img-cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #main-music .my-row .card:hover .hover-shadow{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+main #main-music .my-row .card>*{
+    margin-bottom:15px;
+}
+
+main #main-music .my-row{
+    margin:20px 0;
+}
+main #main-music h2{
+    margin:20px 0;
+}
 /*
     FOOTER
 */
@@ -246,10 +304,10 @@ footer .my-row>div:last-child>div{
     margin:0 5px;
   }
 footer .my-row>div:last-child .bar{
-    width:150px;
+    width:100px;
 }
 footer .my-row>div:last-child .bar .filling{
-    width:50px;
+    width:40px;
 }
 
 /*
@@ -276,8 +334,12 @@ footer .my-row>div:last-child .bar .filling{
     .container-main aside{
         width:50px;
     }
-    .container-main main {
-        width:calc(100% - 50px);
+    .container-main main,
+    main .header-main{
+        width:calc(100% - 50px);  
+    }
+    aside .playlist>*{
+        display:none;
     }
 }
 
