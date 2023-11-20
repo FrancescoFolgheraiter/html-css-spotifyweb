@@ -72,8 +72,26 @@ html{
 }
 .filling{
     background-color: var(--second-grey);
-    height:100%;
+    height: 100%;
     border-radius: 10px;
+    position: relative;
+}
+.cursore-barra{
+    display:none;
+    position: absolute;
+    top:50%;
+    left:100%;
+    background-color: var(--second-grey);
+    border-radius: 50%;
+    transform: translate(-50% , -50%);
+    width: 10px;
+    height: 10px;
+}
+.bar:hover .filling{
+    background-color: var(--main-green)
+}
+.bar:hover .cursore-barra{
+    display:block;
 }
 .container-main{
     height:calc(100vh - 100px);
@@ -335,6 +353,10 @@ footer .control-panel-button{
 footer .control-panel-button>*{
     margin:0 15px;
 }
+footer .play:hover{
+    font-size: 1.2rem;
+}
+
 
 footer .my-row>div:nth-child(2) .bar{
     width:100%;
