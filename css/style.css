@@ -110,6 +110,10 @@ html{
 .circle{
     border-radius: 50%;
 }
+
+.caps{
+    text-transform: uppercase;
+}
 /*section up*/
 .container-main{
     display:flex;
@@ -124,12 +128,18 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding:15px;
+    padding:10px;
     height: 100%;
-    min-height: 440px;
+    min-height: 550px;
+}
+.container-main aside>section{
+    margin-bottom: 20px;
 }
 .container-main aside .img-cont:first-child{
     width: 150px;
+}
+.container-main aside .header-aside .img-cont:first-child>*:last-child{
+    display:none;
 }
 .container-main aside .header-aside .img-cont:not(:first-child){
     width: 30px;
@@ -138,30 +148,47 @@ aside{
     flex-grow: 1;
 }
 .container-main aside .playlist>div:first-of-type{
+    display:flex;
+    align-items: center;
+    margin:10px 0px;
+}
+.container-main aside .playlist>div:first-of-type>*:first-child{
     width: 40px;
     height: 40px;
     background-color: #a3a3a3;
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 .container-main aside .playlist>ul{
     max-height: 50%;
     overflow:auto;
 }
+.container-main aside .playlist>ul>li{
+    margin:10px 0;
+}
 
 .container-main aside .footer-aside>div:first-child{
     border-bottom:2px solid var(--second-grey);
+}
+.container-main aside .footer-aside{
+    margin:0;
 }
 .container-main aside .footer-aside>div{
     display:flex;
     align-items: center;
 }
+.container-main aside .footer-aside>div:first-child{
+margin-bottom: 10px;
+}
 .container-main aside .footer-aside div:first-child .img-cont{
     width:20px;
+    margin-right: 5px;
 }
 .container-main aside .footer-aside div:last-child .img-cont{
     width:30px;
+    margin-right: 5px;
 }
 .container-main aside .footer-aside div:last-child .img-cont>*{
     object-fit: cover;
@@ -191,6 +218,9 @@ main .header-main{
 main .header-main .my-button{
     margin-right:30px;
 }
+main .header-main .my-button:hover{
+    font-size: 1.2rem;
+}
 
 main #main-music{
     height:100%;
@@ -210,8 +240,12 @@ main #main-music nav ul li>.hover-underline{
     background-color: var(--main-green);
     display:none;
 }
+main #main-music nav ul li:hover>a{
+    font-weight: bold;
+    color:white;
+}
 
-main #main-music nav ul li:hover>.hover-underline{
+main #main-music nav ul li:active>.hover-underline{
     display:block;
     position:absolute;
     top:110%;
@@ -338,6 +372,16 @@ footer .my-row>div:last-child .bar .filling{
     main .header-main{
         width:calc(100% - 50px);  
     }
+    .container-main aside .img-cont:first-child{
+        width: 30px;
+    }
+    aside .header-aside>.img-cont:first-child>*:last-child{
+        display:block;
+    }
+    aside .header-aside>*:first-child>*:first-child{
+        display:none;
+    }
+    
     aside .playlist>*{
         display:none;
     }
